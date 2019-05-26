@@ -1,0 +1,7 @@
+{
+  "name": "random-phone-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ademola Ariya <ademola.ariya@andela.com>",
+  "license": "MIT"
+}
