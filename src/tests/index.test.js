@@ -59,7 +59,7 @@ describe('PhoneNumberGenerator', () => {
                     expect(response.body.message).toBe(
                         'Numbers retrieved successfully'
                     );
-                    const sortedAsc = numbers.sort((a, b => a - b))
+                    const sortedAsc = numbers.sort(((a, b ) => a - b))
                     expect(min).toBe(sortedAsc[0]);
                     expect(max).toBe(sortedAsc[numbers.length - 1]);
                     done();
