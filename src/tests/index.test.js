@@ -59,8 +59,9 @@ describe('PhoneNumberGenerator', () => {
                     expect(response.body.message).toBe(
                         'Numbers retrieved successfully'
                     );
-                    expect(min).toBe(Math.min(...numbers));
-                    expect(max).toBe(Math.max(...numbers));
+                    const sortedAsc = numbers.sort((a, b => a - b))
+                    expect(min).toBe(sortedAsc[0]);
+                    expect(max).toBe(sortedAsc[numbers.length - 1]);
                     done();
                 });
         });

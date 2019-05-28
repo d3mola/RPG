@@ -35,14 +35,16 @@ app.get('/api/numbers', (req, res) => {
 	if (numbersStr.length) {
 		let numbers = numbersStr.split(',');
 		numbers = numbers.slice(0, numbers.length - 1);
+		const sortedAsc = numbers.sort((a, b) => a - b);
+		const sortedDesc = numbers.sort((a, b) => b - a);
 		const amount = numbers.length;
-		const min = Math.min(...numbers);
-		const max = Math.max(...numbers);
+		const min = sortedAsc[0];
+		const max = sortedDesc[0];
 
 		if (order === 'desc') {
-			numbers = numbers.sort((a, b) => b - a);
+			numbers = sortedAsc;
 		} else {
-			numbers = numbers.sort((a, b) => a - b);
+			numbers = sortedDesc;
 		}
 
 		return res.status(200).json({
