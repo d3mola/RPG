@@ -88,6 +88,12 @@ app.post('/api/numbers', (req, res) => {
 	});
 });
 
+app.get('/*', (req, res) => {
+	res.status(200).json({
+		message: 'Visit https://github.com/d3mola/RPG/blob/master/README.md to view valid routes'
+	});
+})
+
 
 app.listen(PORT, () => {
 	console.log('server running on port...', PORT);
