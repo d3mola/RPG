@@ -21,6 +21,6 @@ Usage
 
 | HTTP VERB | Description | Endpoints |
 | --- | --- | --- |
-| `POST` | Creates a location | /api/locations |
-| `GET` | Retrieves a list of all locations in asceding order | /api/locations |
-| `GET` | Retrieves a list of all locations in descending order | /api/locations?order=desc |
+| `POST` | Creates a phone number | /api/numbers |
+| `GET` | Retrieves a list of all phone numbers in asceding order | /api/numbers |
+| `GET` | Retrieves a list of all phone numbers in descending order | /api/numbers?order=desc |
